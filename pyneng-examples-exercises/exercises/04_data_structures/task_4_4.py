@@ -14,3 +14,13 @@
 
 command1 = 'switchport trunk allowed vlan 1,3,10,20,30,100'
 command2 = 'switchport trunk allowed vlan 1,3,100,200,300'
+
+vlan1 = command1.strip().split()[-1]
+vlan2 = command2.strip().split()[-1]
+list1 = list(vlan1.split(','))
+list2 = list(vlan2.split(','))
+set1 = set(list1)
+set2 = set(list2)
+set1 & set2
+
+Out[9]: {'1', '100', '3'}
