@@ -19,3 +19,16 @@ Mask:
 
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 '''
+
+ip_input = input('Введите IP адрес: ')
+ip, mask = ip_input.split('/')
+oct1, oct2, oct3, oct4 = ip.split('.')
+templ = '''
+{0:<8} {1:<8} {2:<8} {3:<8}
+{0:08b} {1:08b} {2:08b} {3:08b}
+
+Mask:
+/{4}
+'''
+print(templ.format(int(oct1), int(oct2), int(oct3), 0, int(mask)))
+
