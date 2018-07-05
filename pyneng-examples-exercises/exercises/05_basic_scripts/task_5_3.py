@@ -58,3 +58,8 @@ trunk_template = [
     'switchport trunk encapsulation dot1q', 'switchport mode trunk',
     'switchport trunk allowed vlan {}'
 ]
+
+int_type = input('Выберите режим работы (access или trunk): ')
+int_name = input('Введите тип и номер интерфейса (ex. Gi0/3): ')
+int_vlan = input('Введите номер vlan(ов): ')
+
