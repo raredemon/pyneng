@@ -10,4 +10,4 @@
 
 MAC = 'AAAA:BBBB:CCCC'
 
-':'.join(MAC.split(':'))
+print('.'.join(MAC.split(':')))

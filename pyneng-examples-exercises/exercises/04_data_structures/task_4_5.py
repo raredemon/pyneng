@@ -19,4 +19,4 @@ vlan_list = list(vlan_set)
 vlan_list.sort()
 print(vlan_list)
 
-[1, 2, 3, 4, 10, 20, 30, 100]
+#[1, 2, 3, 4, 10, 20, 30, 100]

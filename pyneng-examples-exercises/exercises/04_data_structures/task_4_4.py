@@ -21,6 +21,6 @@ list1 = list(vlan1.split(','))
 list2 = list(vlan2.split(','))
 set1 = set(list1)
 set2 = set(list2)
-set1 & set2
+print(set1 & set2)
 
-Out[9]: {'1', '100', '3'}
+#Out[9]: {'1', '100', '3'}
