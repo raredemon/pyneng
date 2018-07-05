@@ -23,12 +23,20 @@ Mask:
 ip_input = input('Введите IP адрес: ')
 ip, mask = ip_input.split('/')
 oct1, oct2, oct3, oct4 = ip.split('.')
+# вычисляем маску в бинарном виде
+binmask = str('1')*int(mask)+(32-int(mask))*str(0)
+
+# разделяем маску по октетам
+mask1, mask2, mask3, mask4 = binmask[0:8],binmask[8:16],binmask[16:24],binmask[24:]
+
 templ = '''
+Network:
 {0:<8} {1:<8} {2:<8} {3:<8}
 {0:08b} {1:08b} {2:08b} {3:08b}
 
 Mask:
 /{4}
+{5:<8} {6:<8} {7:<8} {8:<8}
+{5:08b} {6:08b} {7:08b} {8:08b}
 '''
-print(templ.format(int(oct1), int(oct2), int(oct3), 0, int(mask)))
-
+print(templ.format(int(oct1), int(oct2), int(oct3), 0, int(mask), int(mask1, 2), int(mask2, 2), int(mask3, 2), int(mask4, 2)))
