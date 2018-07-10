@@ -60,6 +60,14 @@ trunk_template = [
 ]
 
 int_type = input('Выберите режим работы (access или trunk): ')
-int_name = input('Введите тип и номер интерфейса (ex. Gi0/3): ')
+int_name = str.capitalize(input('Введите тип и номер интерфейса (ex. Gi0/3): '))
 int_vlan = input('Введите номер vlan(ов): ')
+
+print('interface {}'.format(int_name))
+if int_type == 'access':
+    print(str('\n'.join(access_template)).format(int_vlan))
+elif int_type == 'trunk':
+    print(str('\n'.join(trunk_template)).format(int_vlan))
+else:
+    print('Введите "access" или "trunk"!')
 
