@@ -17,3 +17,11 @@ num_list = [10, 2, 30, 100, 10, 50, 11, 30, 15, 7]
 word_list = [
     'python', 'ruby', 'perl', 'ruby', 'perl', 'python', 'ruby', 'perl'
 ]
+
+digit = int(input('Enter number: '))
+num_list.reverse()
+print(int(num_list.index(digit))-1)
+
+word = str(input('Enter word: '))
+word_list.reverse()
+print(int(word_list.index(word))-1)
